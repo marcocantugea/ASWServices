@@ -40,7 +40,7 @@ composer gme/dev-aws-services
 
 ### Servicios SES (Simple Email Services) <a name = "awsses"></a>
 
-Se utiliza la class AWSEmail para el envio de correos mediante el servicio SES de AMAZON.
+Se utiliza la clase AWSEmail para el envio de correos mediante el servicio SES de AMAZON.
 
 Para la simplificacion de envio de correos a traves de la librerias utilizamos el servicios SES de amazon de la siguiente manera
 
@@ -120,7 +120,7 @@ Se requiere que las llaves de S3 esten en un directorio o en el archivo env.
 
 ```php
 
-    $S3Service= new S3Service("gme-proveedores-cfdi","us-west-2",EObtainCredentialsFrom::INI_FILE);            
+    $S3Service= new S3Service("proveedores","us-west-2",EObtainCredentialsFrom::INI_FILE);            
     $result=$S3Service->uploadFile("filesample.txt",  __DIR__."\\testsamples","New Folder","samplefile.txt","text/html");
     print($result);
 
