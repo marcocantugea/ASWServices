@@ -1,6 +1,6 @@
 {
-    "name": "gme/dev-aws-services",
-    "description": "librerias del servicio de Amazon web services",
+    "name": "mcg/aws-services",
+    "description": "Librerias Simples para el servicio de AWS",
     "type": "library",
     "require": {
         "aws/aws-sdk-php": "^3.162",

@@ -1,4 +1,4 @@
-# Libreria de Serviccios AWS de GME - gme/dev-aws-services
+# Librerias Simple para Serviccios AWS - mcg/aws-services
 
 ## Contenido
 
