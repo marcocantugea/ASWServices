@@ -1,0 +1,32 @@
+{
+    "name": "gme/dev-aws-services",
+    "description": "librerias del servicio de Amazon web services",
+    "type": "library",
+    "require": {
+        "aws/aws-sdk-php": "^3.162",
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "vlucas/phpdotenv": "^5.2"
+    },
+    "authors": [
+        {
+            "name": "Marco Cantu Gea",
+            "email": "marco.cantu@gme.mx"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AWS\\Services\\":"src/AWS/Services/",
+            "AWS\\Services\\Mail\\":"src/AWS/Services/Mail/",
+            "AWS\\Services\\Storage\\":"src/AWS/Services/Storage/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}
