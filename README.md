@@ -125,3 +125,101 @@ Se requiere que las llaves de S3 esten en un directorio o en el archivo env.
     print($result);
 
 ```
+## Uso de libreria  <a name = "usageses"></a>
+
+Para la libreria AWS cuenta con los siguientes metodos y descripciones
+
+Metodos:
+ __construct() : constructor de clase
+    - Parametros
+        - bucket    : La configuracion el bucket
+        - region    : Configuracion del la region
+        - getCrefentialsFrom    : Enum de EObtainCredentialsFrom sirve para Configuraicion de obtener las credenciasles de un archivo ini o 
+                                  del archivo .env
+
+setCredentials() : configura la ruta de las credenciales AWS se archivo INI
+        - Parametros
+            getCrefentialsFrom : ruta de donde se encuentra el archivo INI
+
+uploadFile() : funcion para cargar un archivo al servicio S3
+    - Parametros
+            sourceFile  : nombre del archivo a cargar
+            sourceFolder    : ruta del archivo a cargar
+            destinationFolder   : ruta donde se cargara el archivo
+            fileName    : nombre del archivo que tendra al guardar en el S3
+            type    : tipo de archivo mime
+
+saveFileContent() : funcion para guardar el contenido de un archivo, en el servicio S3
+    - Parametros
+            filename    : nombre del archivo que se generara en el S3
+            content     : contenido de archivo
+            folderttoSave   :   folder donde se cargara
+            type        : tipo de archivo mime
+
+deleteFile() : funcion para borrar un archivo del servicio S3
+    - Parametros
+            file : Nombre del archivo a borrar.
+            folder : ruta del archivo a borrar.
+
+fileExist() : funcion para verificar que exista un archivo en el S3
+    - Parametros
+        fileName : ruta y nombre de archivo a consultar
+
+getObjectUrl() :  obtiene el URL de un archivo en el S3
+    - Parametros
+        fileName : ruta y nombre de archivo a consultar
+
+getS3Client() : obtiene el cliente del S3
+
+renameFile() : renombra un archivo del servicio del S3
+    - Parametros
+        oldName : nombre del archivo a cambiar
+        newName : nuevo nombre del archivo
+
+copyFile() : funcion para copiar un archivo entre el servicio S3
+    - Parametros:}
+        sourceName : nombre y ruta del archivo a copiar
+        targetBucket : bucket destino a copiar
+        targetName : nombre y ruta del archivo a crear
+        contentType : tipo de archivo mime
+        deleteSourceFile : opcion a borrar el archivo fuente
+
+listObjectsBuckets():  funcion para listar el contenido de un bucket.
+    - Parametros
+        prefix  : prefijos y configuracion del S3
+        bucket  : bucket seleccionado para obtener
+
+getFileObject() : obtiene el archivo en formato objeto del S3
+    - Parametros:
+        fileName : ruta y nombre de archivo.
+
+getFileContent() : obtiene el contenido de un archivo almacenado del S3
+    - Parametros
+        fileName    : ruta y nombre de archivo.
+
+saveFileByStreamWraper() : funcion para guardar un archivo del servicio S3
+    - Parametros
+        filename : nombre de archivo
+        path    :   ruta de archivo a guardar
+        content :   contenido del archivo a guardar
+
+setBucket() : configura el bucket que se desea utilizar
+    - Parametros
+        bucket : nombre del bucket a selecionar
+
+setProfileIniTagCredentials() : define la etiqueta de las credenciales a obtener del archivo INI
+    - Parametros    
+        profile : etiqueta que consultara del archivo ini para obtener las credenciales
+
+setCredentialsIniFilePath() : estable la ruta para obtener el archivo INI para las credenciales.
+    - Parametros
+        path : ruta de la localizacion del archivo ini para el servicio S3
+
+setRegion() : configura la region para el servicio S3.
+
+getBucket() : obtiene el bucket configurado para la libreria
+
+getCredentialsIniFilePath() : obtiene la ruta del archivo de las credenciales AWS configurado.
+
+getProfileIniTagCredentials() : obtiene la etiqueta que tomara para el archivo INI.
+        
